@@ -32,7 +32,7 @@ const PricingPlans = () => {
       icon: '⭐',
       features: [
         { name: 'Chat Messages', value: '15000/month', included: true },
-        { name: 'Voice Minutes', value: '190 min/month', included: true },
+        { name: 'Voice Minutes', value: '200 min/month', included: true },
         { name: 'Response Time', value: 'Fast (< 2s)', included: true },
         { name: 'Advanced Analytics', value: 'Full Dashboard', included: true },
         { name: 'Priority Support', value: '24/7 Support', included: true },
@@ -49,7 +49,7 @@ const PricingPlans = () => {
       icon: '👑',
       features: [
         { name: 'Chat Messages', value: 'Unlimited', included: true },
-        { name: 'Voice Minutes', value: '400 min/month', included: true },
+        { name: 'Voice Minutes', value: '450 min/month', included: true },
         { name: 'Response Time', value: 'Ultra-fast (< 1s)', included: true },
         { name: 'Advanced Analytics', value: 'Full Dashboard + Insights', included: true },
         { name: 'Priority Support', value: 'Dedicated Manager', included: true },
@@ -94,25 +94,27 @@ const PricingPlans = () => {
       </div>
 
       <div className="pricing-grid">
-        {Object.entries(plans).map(([key, plan]) => (
-          <motion.div
-            key={key}
-            className={`pricing-card ${selectedPlan === key ? 'selected' : ''}`}
-            whileHover={{ scale: 1.02 }}
-            onClick={() => setSelectedPlan(key)}
-            layout
-          >
-            {key === 'pro' && <div className="popular-badge">Most Popular</div>}
-            
-            <div className="plan-icon">{plan.icon}</div>
-            <h3>{plan.name}</h3>
-            <p className="plan-description">{plan.description}</p>
-            
-            <div className="price-display">
-              <span className="currency">$</span>
-              <span className="amount">{price}</span>
-              <span className="period">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-            </div>
+        {Object.entries(plans).map(([key, plan]) => {
+          const cardPrice = billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice;
+          return (
+            <motion.div
+              key={key}
+              className={`pricing-card ${selectedPlan === key ? 'selected' : ''}`}
+              whileHover={{ scale: 1.02 }}
+              onClick={() => setSelectedPlan(key)}
+              layout
+            >
+              {key === 'pro' && <div className="popular-badge">Most Popular</div>}
+              
+              <div className="plan-icon">{plan.icon}</div>
+              <h3>{plan.name}</h3>
+              <p className="plan-description">{plan.description}</p>
+              
+              <div className="price-display">
+                <span className="currency">$</span>
+                <span className="amount">{cardPrice}</span>
+                <span className="period">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+              </div>
 
             <button className="cta-button">Get Started</button>
 
@@ -142,8 +144,9 @@ const PricingPlans = () => {
                 That's approximately <strong>{Math.round(plan.monthlyMinutes / 4)}</strong> sessions per week
               </p>
             </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* Interactive Cost Breakdown */}
