@@ -25,7 +25,7 @@ app.post('/api/chat', async (req, res) => {
     
     if (!message) return res.status(400).json({ error: 'Message required' });
 
-    const apiKey = process.env.OPENROUTER_API_KEY;
+    const apiKey = process.env.REACT_APP_OPENROUTER_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'API key missing' });
 
     console.log('[CHAT] API Key:', apiKey.substring(0, 10) + '...');
