@@ -1,0 +1,176 @@
+.advice-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.section-heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subtext {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.advice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.advice-card {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fcfcfc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advice-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .advice-section {
+    padding: 40px 20px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .section-subtext {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .advice-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    gap: 20px;
+  }
+
+  .advice-card {
+    padding: 20px;
+  }
+
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .card-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .advice-section {
+    padding: 24px 14px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .section-heading {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .section-subtext {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .advice-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 16px;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .advice-card {
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .card-description {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .advice-section {
+    padding: 16px 10px;
+  }
+
+  .section-heading {
+    font-size: 18px;
+  }
+
+  .advice-card {
+    padding: 12px;
+  }
+
+  .card-icon {
+    font-size: 24px;
+  }
+
+  .card-title {
+    font-size: 13px;
+  }
+
+  .card-description {
+    font-size: 11px;
+  }
+}

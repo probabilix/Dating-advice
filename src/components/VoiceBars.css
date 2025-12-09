@@ -1,0 +1,17 @@
+.voice-bars-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+}
+
+.voice-bar {
+  width: 8px;
+  height: 100%;
+  margin: 0 3px; /* Slightly wider margin for better separation */
+  background-color: var(--color-primary); 
+  border-radius: 4px;
+  transform-origin: bottom; 
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); /* Subtle glow */
+}

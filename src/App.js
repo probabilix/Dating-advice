@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Global styles
+import Header from './components/Header';
+import VoiceAgent from './components/VoiceAgent';
+import DetailedInput from './components/DetailedInput';
+import AdviceSection from './components/AdviceSection';
+import Footer from './components/Footer'; // Simple component
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main>
+        {/* Section 1: Hero & Agent */}
+        <VoiceAgent />
+        
+        {/* Section 2: Detailed Inputs (High-Impact Demo) */}
+        <DetailedInput />
+        
+        {/* Section 3: Advice Pillars (Scroll Animation) */}
+        <AdviceSection />
+        
+        {/* Section 4: Call to Action / Footer */}
+      </main>
+      <Footer />
     </div>
   );
 }

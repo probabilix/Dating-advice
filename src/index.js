@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'; // FIX: Import React for JSX usage (Line 5)
+import ReactDOM from 'react-dom/client'; // Import ReactDOM for rendering
+import App from './App'; // FIX: Ensure App is imported (Line 7)
+import { ThemeProvider } from './contexts/ThemeContext'; // Import your ThemeProvider
+import './index.css'; // Import global styles
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// FIX: 'root' is not defined (Line 4)
+// This line uses the new React 18+ way to get the root element and create the root
+const rootElement = document.getElementById('root'); 
+const root = ReactDOM.createRoot(rootElement);
+
 root.render(
+  // The StrictMode is a tool for highlighting potential problems in an application
   <React.StrictMode>
-    <App />
+    {/* Wrap the entire application in the ThemeProvider */}
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
