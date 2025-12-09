@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Health
+// Helth
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
