@@ -27,8 +27,8 @@ const Header = () => {
         <a href="#how-it-works">How It Works</a>
         
         {/* Theme Toggle Button */}
-        <button onClick={toggleTheme} className="theme-toggle-btn">
-          {theme === 'dark' ? '☀️ Light Mode' : '🌑 Dark Mode'}
+        <button onClick={toggleTheme} className="theme-toggle-btn" title={theme === 'dark' ? 'Light Mode' : 'Dark Mode'}>
+          {theme === 'dark' ? '☀️' : '🌑'}
         </button>
       </nav>
     </motion.header>
