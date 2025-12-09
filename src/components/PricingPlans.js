@@ -14,15 +14,15 @@ const PricingPlans = () => {
       description: 'Perfect for getting started',
       icon: '🌱',
       features: [
-        { name: 'Chat Messages', value: '5000/month', included: true },
+        { name: 'Chat Messages', value: '5,000/month', included: true },
         { name: 'Voice Minutes', value: '80 min/month', included: true },
         { name: 'Response Time', value: 'Standard', included: true },
         { name: 'Advanced Analytics', value: '', included: false },
         { name: 'Priority Support', value: '', included: false },
         { name: 'Custom AI Personality', value: '', included: false },
       ],
-      monthlyMinutes: 30,
-      costBreakdown: { vapi: '$15', gemini: '$15', markup: '$19' }
+      monthlyMinutes: 80,
+      costBreakdown: { vapi: '$40', gemini: '$5', markup: '$4' }
     },
     pro: {
       name: 'Pro',
@@ -31,15 +31,15 @@ const PricingPlans = () => {
       description: 'Most popular choice',
       icon: '⭐',
       features: [
-        { name: 'Chat Messages', value: '15000/month', included: true },
+        { name: 'Chat Messages', value: '15,000/month', included: true },
         { name: 'Voice Minutes', value: '200 min/month', included: true },
         { name: 'Response Time', value: 'Fast (< 2s)', included: true },
         { name: 'Advanced Analytics', value: 'Full Dashboard', included: true },
         { name: 'Priority Support', value: '24/7 Support', included: true },
         { name: 'Custom AI Personality', value: '', included: false },
       ],
-      monthlyMinutes: 120,
-      costBreakdown: { vapi: '$60', gemini: '$45', markup: '$24' }
+      monthlyMinutes: 200,
+      costBreakdown: { vapi: '$100', gemini: '$15', markup: '$14' }
     },
     premium: {
       name: 'Premium',
@@ -55,13 +55,12 @@ const PricingPlans = () => {
         { name: 'Priority Support', value: 'Dedicated Manager', included: true },
         { name: 'Custom AI Personality', value: 'Yes', included: true },
       ],
-      monthlyMinutes: 300,
-      costBreakdown: { vapi: '$150', gemini: '$100', markup: '-$1' }
+      monthlyMinutes: 450,
+      costBreakdown: { vapi: '$205', gemini: '$20', markup: '$24' }
     },
   };
 
   const currentPlan = plans[selectedPlan];
-  const price = billingCycle === 'monthly' ? currentPlan.monthlyPrice : currentPlan.yearlyPrice;
   const savings = billingCycle === 'yearly' ? Math.round((currentPlan.monthlyPrice * 12 - currentPlan.yearlyPrice) / (currentPlan.monthlyPrice * 12) * 100) : 0;
 
   return (
