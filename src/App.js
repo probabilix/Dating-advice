@@ -4,6 +4,7 @@ import Header from './components/Header';
 import VoiceAgent from './components/VoiceAgent';
 import DetailedInput from './components/DetailedInput';
 import AdviceSection from './components/AdviceSection';
+import PricingPlans from './components/PricingPlans';
 import Footer from './components/Footer'; // Simple component
 
 function App() {
