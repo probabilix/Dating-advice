@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: dating-advice-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node backend.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      - key: OPENROUTER_API_KEY
+        sync: false
