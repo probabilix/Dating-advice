@@ -14,7 +14,7 @@ const PricingPlans = () => {
       description: 'Perfect for getting started',
       icon: '🌱',
       features: [
-        { name: 'Chat Messages', value: '50/month', included: true },
+        { name: 'Chat Messages', value: '5000/month', included: true },
         { name: 'Voice Minutes', value: '30 min/month', included: true },
         { name: 'Response Time', value: 'Standard', included: true },
         { name: 'Advanced Analytics', value: '', included: false },
@@ -31,7 +31,7 @@ const PricingPlans = () => {
       description: 'Most popular choice',
       icon: '⭐',
       features: [
-        { name: 'Chat Messages', value: '500/month', included: true },
+        { name: 'Chat Messages', value: '15000/month', included: true },
         { name: 'Voice Minutes', value: '120 min/month', included: true },
         { name: 'Response Time', value: 'Fast (< 2s)', included: true },
         { name: 'Advanced Analytics', value: 'Full Dashboard', included: true },
