@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -36,9 +35,8 @@
   max-width: 1200px;
   margin: 0 auto 40px;
   width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .query-card {
