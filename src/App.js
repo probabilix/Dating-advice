@@ -19,7 +19,10 @@ function App() {
         
         {/* Section 3: Advice Pillars (Scroll Animation) */}
         <AdviceSection />
-        
+
+        {/* Section 4: Pricing Plans */}
+        <PricingPlans />
+    
         {/* Section 4: Call to Action / Footer */}
       </main>
       <Footer />
