@@ -15,7 +15,7 @@ const PricingPlans = () => {
       icon: '🌱',
       features: [
         { name: 'Chat Messages', value: '5000/month', included: true },
-        { name: 'Voice Minutes', value: '30 min/month', included: true },
+        { name: 'Voice Minutes', value: '80 min/month', included: true },
         { name: 'Response Time', value: 'Standard', included: true },
         { name: 'Advanced Analytics', value: '', included: false },
         { name: 'Priority Support', value: '', included: false },
@@ -32,7 +32,7 @@ const PricingPlans = () => {
       icon: '⭐',
       features: [
         { name: 'Chat Messages', value: '15000/month', included: true },
-        { name: 'Voice Minutes', value: '120 min/month', included: true },
+        { name: 'Voice Minutes', value: '190 min/month', included: true },
         { name: 'Response Time', value: 'Fast (< 2s)', included: true },
         { name: 'Advanced Analytics', value: 'Full Dashboard', included: true },
         { name: 'Priority Support', value: '24/7 Support', included: true },
@@ -49,7 +49,7 @@ const PricingPlans = () => {
       icon: '👑',
       features: [
         { name: 'Chat Messages', value: 'Unlimited', included: true },
-        { name: 'Voice Minutes', value: '300 min/month', included: true },
+        { name: 'Voice Minutes', value: '400 min/month', included: true },
         { name: 'Response Time', value: 'Ultra-fast (< 1s)', included: true },
         { name: 'Advanced Analytics', value: 'Full Dashboard + Insights', included: true },
         { name: 'Priority Support', value: 'Dedicated Manager', included: true },
